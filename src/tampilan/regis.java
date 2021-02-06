@@ -29,7 +29,6 @@ public class regis extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         tusername = new javax.swing.JTextField();
-        tpassword = new javax.swing.JPasswordField();
         jLabel5 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -38,6 +37,7 @@ public class regis extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         tid = new javax.swing.JTextField();
         tnama = new javax.swing.JTextField();
+        tpassword = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -94,6 +94,12 @@ public class regis extends javax.swing.JFrame {
             }
         });
 
+        tpassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tpasswordActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -113,10 +119,10 @@ public class regis extends javax.swing.JFrame {
                                     .addComponent(jLabel5)
                                     .addGap(134, 134, 134)))
                             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(tpassword, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(tusername, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(tid, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(tnama, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(tnama, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(tpassword, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGap(10, 10, 10)))
                     .addComponent(jLabel8)
                     .addComponent(jLabel9))
@@ -144,10 +150,10 @@ public class regis extends javax.swing.JFrame {
                     .addComponent(jLabel4)
                     .addComponent(tusername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
                     .addComponent(tpassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(36, 36, 36)
+                .addGap(37, 37, 37)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -219,7 +225,7 @@ public class regis extends javax.swing.JFrame {
         String id = tid.getText();
         String nama = tnama.getText();
         String username = tusername.getText();
-        String password = String.valueOf(tpassword.getPassword());
+        String password = String.valueOf(tpassword.getText());
         
         try{
             String sql="insert into user (id,nama,username,password)"
@@ -251,6 +257,10 @@ public class regis extends javax.swing.JFrame {
     private void tnamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tnamaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tnamaActionPerformed
+
+    private void tpasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tpasswordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tpasswordActionPerformed
 
     /**
      * @param args the command line arguments
@@ -302,7 +312,7 @@ public class regis extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField tid;
     private javax.swing.JTextField tnama;
-    private javax.swing.JPasswordField tpassword;
+    private javax.swing.JTextField tpassword;
     private javax.swing.JTextField tusername;
     // End of variables declaration//GEN-END:variables
 }

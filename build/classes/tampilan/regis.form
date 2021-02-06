@@ -74,10 +74,10 @@
                                   </Group>
                               </Group>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="tpassword" min="-2" pref="260" max="-2" attributes="0"/>
                                   <Component id="tusername" min="-2" pref="260" max="-2" attributes="0"/>
                                   <Component id="tid" alignment="0" min="-2" pref="260" max="-2" attributes="0"/>
                                   <Component id="tnama" alignment="0" min="-2" pref="260" max="-2" attributes="0"/>
+                                  <Component id="tpassword" min="-2" pref="260" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                           </Group>
@@ -115,11 +115,11 @@
                       <Component id="tusername" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="tpassword" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                      <Component id="tpassword" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                   <Component id="jButton1" min="-2" pref="35" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jButton2" min="-2" pref="35" max="-2" attributes="0"/>
@@ -141,8 +141,6 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tusernameActionPerformed"/>
           </Events>
-        </Component>
-        <Component class="javax.swing.JPasswordField" name="tpassword">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel5">
           <Properties>
@@ -200,6 +198,11 @@
         <Component class="javax.swing.JTextField" name="tnama">
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tnamaActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="tpassword">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tpasswordActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

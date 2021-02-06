@@ -195,13 +195,13 @@ public class rekapabsen extends javax.swing.JFrame {
 
         jLabel23.setText("Nama");
 
-        jLabel27.setText("Jumlah Cuti");
+        jLabel27.setText("Cuti Terpakai");
 
         jLabel28.setText("Jumlah Absen");
 
         jLabel29.setText("Jumlah Sakit");
 
-        cdepartement.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih", "HRD & GA", "Finance", "Marketing & CS", "IT", "Production", "Logistic", " ", " " }));
+        cdepartement.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih", "HRD & GA", "Finance", "Marketing & CS", "IT", "Production", "Logistic" }));
 
         tbldata.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
