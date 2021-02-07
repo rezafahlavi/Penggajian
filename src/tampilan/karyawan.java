@@ -122,7 +122,7 @@ public class karyawan extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 30)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(204, 0, 51));
-        jLabel3.setText("Database Karyawan PZ Cussos");
+        jLabel3.setText("Data Karyawan PT PZ Cussos");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -132,7 +132,7 @@ public class karyawan extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel3)
-                .addGap(164, 164, 164)
+                .addGap(190, 190, 190)
                 .addComponent(jLabel2))
         );
         jPanel1Layout.setVerticalGroup(

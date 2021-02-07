@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b74e57f6-443e-4226-a178-96c9f01d54ca">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     absen.`id` AS absen_id,
+     absen.`id_kar` AS absen_id_kar,
+     absen.`nama` AS absen_nama,
+     absen.`jabatan` AS absen_jabatan,
+     absen.`departement` AS absen_departement,
+     absen.`tanggal` AS absen_tanggal,
+     absen.`hadir` AS absen_hadir,
+     absen.`cuti` AS absen_cuti,
+     absen.`absen` AS absen_absen,
+     absen.`sakit` AS absen_sakit
+FROM
+     `absen` absen]]>
+	</queryString>
+	<field name="absen_id" class="java.lang.String"/>
+	<field name="absen_id_kar" class="java.lang.String"/>
+	<field name="absen_nama" class="java.lang.String"/>
+	<field name="absen_jabatan" class="java.lang.String"/>
+	<field name="absen_departement" class="java.lang.String"/>
+	<field name="absen_tanggal" class="java.sql.Date"/>
+	<field name="absen_hadir" class="java.lang.Integer"/>
+	<field name="absen_cuti" class="java.lang.Integer"/>
+	<field name="absen_absen" class="java.lang.Integer"/>
+	<field name="absen_sakit" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="132" splitType="Stretch">
+			<line>
+				<reportElement uuid="8e62ea81-3026-4f90-b395-b5856ef9aa6c" x="-2" y="87" width="552" height="1"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<image>
+				<reportElement uuid="2c19b2a8-360b-45fb-bda9-fca4d63d89e5" x="3" y="2" width="98" height="102" forecolor="#FFFFFF"/>
+				<imageExpression><![CDATA["src/laporan/logo.jpg"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement uuid="ad4d4b19-2533-4a45-a094-d3fa9c0e4ff3" positionType="FixRelativeToBottom" x="116" y="2" width="1" height="85"/>
+			</line>
+			<staticText>
+				<reportElement uuid="0cf8808c-fba6-4a98-b6b0-642a63352d67" x="128" y="65" width="424" height="22"/>
+				<textElement>
+					<font size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[RDTX Tower, Jl.Prof.Dr.Satrio Kav.E4 No.6 Mega Kuningan Jakarta Selatan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="02877861-5036-40dd-836c-a9e25da15b15" x="128" y="15" width="427" height="37"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Laporan Rekap Asen PT PZ Cussons Indonesia]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="1fe415cc-1058-41f2-8d41-021794c1bd95" style="Column header" x="0" y="7" width="45" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="744aca34-c509-4165-bab5-d64bf1c80837" style="Column header" x="45" y="7" width="80" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[ID Karyawan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b6dee9c5-fa0d-40e1-af95-60c393822dec" style="Column header" x="124" y="7" width="55" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ed1ebe20-02ed-4fa3-a38b-646976caf6aa" style="Column header" x="179" y="7" width="55" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Jabatan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ac174c47-93f9-43e0-8429-14ed7425932e" style="Column header" x="234" y="7" width="76" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Departement]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="42b5296e-38e4-42d7-9a0f-20f70b320e02" style="Column header" x="309" y="7" width="68" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Tanggal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9739b07e-1472-4516-a3f0-8fc4373de2a0" style="Column header" x="377" y="7" width="50" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Hadir]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a7708668-0047-4437-a576-b9657c6636e8" style="Column header" x="427" y="7" width="44" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Cuti]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="bdfb4a7c-4992-4e09-9410-e9e471fe7a17" style="Column header" x="471" y="7" width="47" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Absen]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c01f005a-1a92-4260-bc39-635f28cd6b7a" style="Column header" x="518" y="7" width="37" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Sakit]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<frame>
+				<reportElement uuid="a47a472e-1643-43db-9045-8858293d8ee1" style="Row" mode="Opaque" x="0" y="0" width="555" height="18"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="acb0a9f8-4489-4395-ba18-68d26026e9dd" style="Detail" positionType="Float" x="0" y="0" width="45" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{absen_id}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="98a976f4-9570-4f42-9a79-a0b57c2060b4" style="Detail" positionType="Float" x="45" y="0" width="80" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{absen_id_kar}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="c397e398-dd52-48fa-9dfb-152d4f39cdfa" style="Detail" positionType="Float" x="124" y="0" width="55" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{absen_nama}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="2d3240ff-9082-4e30-a16f-a3e253d8b1fc" style="Detail" positionType="Float" x="179" y="0" width="55" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{absen_jabatan}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="761f5136-06d1-4ade-a156-8f233a50fc0d" style="Detail" positionType="Float" x="234" y="0" width="76" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{absen_departement}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy">
+					<reportElement uuid="f5855966-1c9f-401f-8ac3-800810818f48" style="Detail" positionType="Float" x="309" y="0" width="68" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{absen_tanggal}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="f748955f-ac38-4402-b0b0-cdca95c46776" style="Detail" positionType="Float" x="377" y="0" width="50" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{absen_hadir}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="bd487896-ec1e-4704-b36f-39405a8a8c97" style="Detail" positionType="Float" x="427" y="0" width="44" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{absen_cuti}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="4f18bc14-8fba-4ad5-a08f-81fc576e5121" style="Detail" positionType="Float" x="471" y="0" width="47" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{absen_absen}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="1d7495e6-9752-4433-8548-92b53d0844fb" style="Detail" positionType="Float" x="518" y="0" width="37" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{absen_sakit}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="7" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="116" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="9df91fc4-766c-4e1d-84b0-02d119f5503c" style="SubTitle" x="341" y="0" width="57" height="16" forecolor="#000000" backcolor="#000000"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jakarta,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9df91fc4-766c-4e1d-84b0-02d119f5503c" style="SubTitle" x="398" y="85" width="117" height="16" forecolor="#000000" backcolor="#000000"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[(  NK. Sulistyawati )]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="42ae148c-0f94-4fd1-a2c5-2f8c72402a90" style="Column header" x="408" y="0" width="142" height="16" forecolor="#000000"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("EEEE dd MMMMM yyyy",new java.util.Locale("id")).format(new Date())]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="9df91fc4-766c-4e1d-84b0-02d119f5503c" style="SubTitle" x="380" y="16" width="133" height="16" forecolor="#000000" backcolor="#000000"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Finance Manager]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
