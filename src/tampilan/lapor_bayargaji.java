@@ -231,7 +231,7 @@ protected void datatable(){
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         try{
-           //(lapnya juga salah) String namaFile = "src/laporan/lap_gaji.jasper";
+            String namaFile = "src/laporan/lap_gaji.jasper";
             Connection conn = new koneksi().GetConnection();
             HashMap parameter = new HashMap();
             File report_file = new File(namaFile);

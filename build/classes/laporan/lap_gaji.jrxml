@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0e7ba71b-1a69-48cb-aab3-142da3634dac">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ccfd2163-0e2d-4089-aa3f-f98d786684e7">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
@@ -52,33 +52,33 @@ FROM
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="102" splitType="Stretch">
+		<band height="108" splitType="Stretch">
 			<image>
-				<reportElement uuid="2c19b2a8-360b-45fb-bda9-fca4d63d89e5" x="0" y="0" width="98" height="102" forecolor="#FFFFFF"/>
-				<imageExpression><![CDATA["logo.jpg"]]></imageExpression>
+				<reportElement uuid="2c19b2a8-360b-45fb-bda9-fca4d63d89e5" x="0" y="1" width="98" height="102" forecolor="#FFFFFF"/>
+				<imageExpression><![CDATA["src/laporan/logo.jpg"]]></imageExpression>
 			</image>
 			<line>
-				<reportElement uuid="8e62ea81-3026-4f90-b395-b5856ef9aa6c" x="0" y="85" width="802" height="1"/>
+				<reportElement uuid="8e62ea81-3026-4f90-b395-b5856ef9aa6c" x="0" y="86" width="802" height="1"/>
 				<graphicElement>
 					<pen lineWidth="2.0" lineStyle="Double"/>
 				</graphicElement>
 			</line>
 			<line>
-				<reportElement uuid="ad4d4b19-2533-4a45-a094-d3fa9c0e4ff3" positionType="FixRelativeToBottom" x="110" y="0" width="1" height="85"/>
+				<reportElement uuid="ad4d4b19-2533-4a45-a094-d3fa9c0e4ff3" positionType="FixRelativeToBottom" x="110" y="1" width="1" height="85"/>
 			</line>
 			<staticText>
-				<reportElement uuid="0cf8808c-fba6-4a98-b6b0-642a63352d67" x="122" y="63" width="424" height="22"/>
+				<reportElement uuid="0cf8808c-fba6-4a98-b6b0-642a63352d67" x="122" y="64" width="424" height="22"/>
 				<textElement>
 					<font size="12" isBold="false"/>
 				</textElement>
 				<text><![CDATA[RDTX Tower, Jl.Prof.Dr.Satrio Kav.E4 No.6 Mega Kuningan Jakarta Selatan]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="02877861-5036-40dd-836c-a9e25da15b15" x="122" y="13" width="591" height="37"/>
+				<reportElement uuid="02877861-5036-40dd-836c-a9e25da15b15" x="122" y="14" width="591" height="37"/>
 				<textElement>
 					<font size="24" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Laporan Pembayaran Gaji PT PZ Cussons Indonesia]]></text>
+				<text><![CDATA[Laporan Data Gaji PT PZ Cussons Indonesia]]></text>
 			</staticText>
 		</band>
 	</title>
@@ -88,107 +88,107 @@ FROM
 	<columnHeader>
 		<band height="18" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="600b309d-df24-4c08-b8b9-6d7b8e3fcc42" style="&lt;Different Values&gt;" x="0" y="0" width="53" height="18" forecolor="#000000"/>
+				<reportElement uuid="e42d6836-dd86-4b45-bbff-84cd674ce3f8" style="Column header" x="0" y="0" width="48" height="18" forecolor="#000000"/>
 				<textElement>
-					<font size="12" isBold="false"/>
+					<font size="11" isBold="false"/>
 				</textElement>
 				<text><![CDATA[ID]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="7bfe2f00-917a-42f3-8c98-2828bd16c1fe" style="&lt;Different Values&gt;" x="53" y="0" width="53" height="18" forecolor="#000000"/>
+				<reportElement uuid="44bba3e5-29bd-4ca5-8d3f-e39bb67e4f3c" style="Column header" x="48" y="0" width="61" height="18" forecolor="#000000"/>
 				<textElement>
-					<font size="12" isBold="false"/>
+					<font size="11" isBold="false"/>
 				</textElement>
 				<text><![CDATA[ID Karyawan]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="3c1a52af-7eab-4cf4-bd15-7db1a4d9a145" style="&lt;Different Values&gt;" x="106" y="0" width="53" height="18" forecolor="#000000"/>
+				<reportElement uuid="6ef81d5b-b932-4e6c-a13d-d445cd9e6242" style="Column header" x="109" y="0" width="53" height="18" forecolor="#000000"/>
 				<textElement>
-					<font size="12" isBold="false"/>
+					<font size="11" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Nama]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="113496f0-de7a-4b1d-bff1-6d8aac4e79fe" style="&lt;Different Values&gt;" x="159" y="0" width="53" height="18" forecolor="#000000"/>
+				<reportElement uuid="4c388164-72a4-4103-9e4e-983113e74a12" style="Column header" x="162" y="0" width="53" height="18" forecolor="#000000"/>
 				<textElement>
-					<font size="12" isBold="false"/>
+					<font size="11" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Jabatan]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="a2aca73e-9615-4737-92c0-8ac6ef0356c5" style="&lt;Different Values&gt;" x="212" y="0" width="53" height="18" forecolor="#000000"/>
+				<reportElement uuid="3f0e02e1-baa4-4e5c-9a0a-d1b58a9467d9" style="Column header" x="215" y="0" width="64" height="18" forecolor="#000000"/>
 				<textElement>
-					<font size="12" isBold="false"/>
+					<font size="11" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Departement]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="81e25b74-8013-41e1-883a-325d0815651d" style="&lt;Different Values&gt;" x="265" y="0" width="53" height="18" forecolor="#000000"/>
+				<reportElement uuid="43eed810-c808-4d6d-9838-169721180af8" style="Column header" x="279" y="0" width="53" height="18" forecolor="#000000"/>
 				<textElement>
-					<font size="12" isBold="false"/>
+					<font size="11" isBold="false"/>
 				</textElement>
 				<text><![CDATA[No Rek]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="a87108b3-4175-4fed-9962-2510a3c676f9" style="&lt;Different Values&gt;" x="318" y="0" width="53" height="18" forecolor="#000000"/>
+				<reportElement uuid="43732551-e0ff-4cca-be44-05e585a4149a" style="Column header" x="332" y="0" width="53" height="18" forecolor="#000000"/>
 				<textElement>
-					<font size="12" isBold="false"/>
+					<font size="11" isBold="false"/>
 				</textElement>
-				<text><![CDATA[Nama Rek]]></text>
+				<text><![CDATA[Rekening]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="b2dbc580-4c08-4ddf-a0b6-2c56baae6b3b" style="&lt;Different Values&gt;" x="371" y="0" width="53" height="18" forecolor="#000000"/>
+				<reportElement uuid="9f26db24-097a-40d5-876c-a57637f18feb" style="Column header" x="385" y="0" width="53" height="18" forecolor="#000000"/>
 				<textElement>
-					<font size="12" isBold="false"/>
+					<font size="11" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Hadir]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="3fe66281-a854-4111-ad19-66c14f5a07bf" style="&lt;Different Values&gt;" x="424" y="0" width="53" height="18" forecolor="#000000"/>
+				<reportElement uuid="f733aed6-d45d-42af-b174-cf58874fa915" style="Column header" x="438" y="0" width="53" height="18" forecolor="#000000"/>
 				<textElement>
-					<font size="12" isBold="false"/>
+					<font size="11" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Gaji]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="4ba827cd-048f-40d1-a53a-79f9ffc4888c" style="&lt;Different Values&gt;" x="477" y="0" width="53" height="18" forecolor="#000000"/>
+				<reportElement uuid="203e3664-3a6c-4d92-b314-38fc18a06b34" style="Column header" x="492" y="0" width="35" height="18" forecolor="#000000"/>
 				<textElement>
-					<font size="12" isBold="false"/>
+					<font size="11" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Periode]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="d2667d08-eb58-4162-a95a-1a0c9f361b30" style="&lt;Different Values&gt;" x="530" y="0" width="53" height="18" forecolor="#000000"/>
+				<reportElement uuid="f3cbca52-2187-494a-9698-aef271bf8e8a" style="Column header" x="530" y="0" width="53" height="18" forecolor="#000000"/>
 				<textElement>
-					<font size="12" isBold="false"/>
+					<font size="11" isBold="false"/>
 				</textElement>
 				<text><![CDATA[BPJS TK]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="61a809be-4528-4ade-8d2d-dc630cb7e6f4" style="&lt;Different Values&gt;" x="583" y="0" width="53" height="18" forecolor="#000000"/>
+				<reportElement uuid="cfecca1c-9aa4-4d89-8e7b-3fec29e27b06" style="Column header" x="583" y="0" width="53" height="18" forecolor="#000000"/>
 				<textElement>
-					<font size="12" isBold="false"/>
+					<font size="11" isBold="false"/>
 				</textElement>
 				<text><![CDATA[BPJS Kes]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="3225b67f-67aa-4105-8a40-0479d9fbccc3" style="&lt;Different Values&gt;" x="636" y="0" width="53" height="18" forecolor="#000000"/>
+				<reportElement uuid="663082e6-a087-47e2-bf9e-dfaa0e404e82" style="Column header" x="636" y="0" width="53" height="18" forecolor="#000000"/>
 				<textElement>
-					<font size="12" isBold="false"/>
+					<font size="11" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Tunjangan]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="c915d923-9027-4797-9129-4f8977e1233d" style="&lt;Different Values&gt;" x="689" y="0" width="53" height="18" forecolor="#000000"/>
+				<reportElement uuid="d013f192-5db6-4035-8aa4-cf1f03df1421" style="Column header" x="689" y="0" width="53" height="18" forecolor="#000000"/>
 				<textElement>
-					<font size="12" isBold="false"/>
+					<font size="11" isBold="false"/>
 				</textElement>
-				<text><![CDATA[Pph21]]></text>
+				<text><![CDATA[PPH 21]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="cb7f6244-dc72-45fc-af8e-73177c33974b" style="&lt;Different Values&gt;" x="742" y="0" width="53" height="18" forecolor="#000000"/>
+				<reportElement uuid="6ff51f48-ea83-41ff-8c37-b677524229a7" style="Column header" x="742" y="0" width="53" height="18" forecolor="#000000"/>
 				<textElement>
-					<font size="12" isBold="false"/>
+					<font size="11" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Total]]></text>
 			</staticText>
@@ -197,107 +197,107 @@ FROM
 	<detail>
 		<band height="18" splitType="Stretch">
 			<frame>
-				<reportElement uuid="fc7fcc30-1fe1-4834-8f14-de6a365ba524" style="Row" mode="Opaque" x="0" y="0" width="797" height="18"/>
+				<reportElement uuid="64cbf104-5917-435b-ad7b-47947bb2f329" style="Row" mode="Opaque" x="0" y="0" width="797" height="18"/>
 				<textField isStretchWithOverflow="true">
-					<reportElement uuid="7421f33c-f2e1-4591-99a9-637749f851ed" style="&lt;Different Values&gt;" positionType="Float" x="0" y="0" width="53" height="18"/>
+					<reportElement uuid="20f5fe1c-039c-4457-a10a-c6b9a11937c6" style="Detail" positionType="Float" x="0" y="0" width="48" height="18"/>
 					<textElement>
 						<font size="12"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{gaji_id}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true">
-					<reportElement uuid="7c466053-f259-4fe8-b58b-5e29c1714767" style="&lt;Different Values&gt;" positionType="Float" x="53" y="0" width="53" height="18"/>
+					<reportElement uuid="0f85ef6c-e2fb-4408-a5bc-2a7033c63a7d" style="Detail" positionType="Float" x="48" y="0" width="61" height="18"/>
 					<textElement>
 						<font size="12"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{gaji_id_kar}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true">
-					<reportElement uuid="855451a2-0719-40b3-912d-6578d1dd8efd" style="&lt;Different Values&gt;" positionType="Float" x="106" y="0" width="53" height="18"/>
+					<reportElement uuid="1a35d2b1-3286-4ba8-8bb7-8bd759fa6c72" style="Detail" positionType="Float" x="109" y="0" width="53" height="18"/>
 					<textElement>
 						<font size="12"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{gaji_nama}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true">
-					<reportElement uuid="966c30cd-8b6b-4a29-bdcc-e606a12168a7" style="&lt;Different Values&gt;" positionType="Float" x="159" y="0" width="53" height="18"/>
+					<reportElement uuid="3de90130-8cff-463a-b317-1bcb1e651caf" style="Detail" positionType="Float" x="162" y="0" width="53" height="18"/>
 					<textElement>
 						<font size="12"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{gaji_jabatan}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true">
-					<reportElement uuid="f3bc7100-b175-41d0-82d6-5c583887aa27" style="&lt;Different Values&gt;" positionType="Float" x="212" y="0" width="53" height="18"/>
+					<reportElement uuid="40f73006-0999-43fe-bf0d-1de3188a0342" style="Detail" positionType="Float" x="215" y="0" width="64" height="18"/>
 					<textElement>
 						<font size="12"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{gaji_departement}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true">
-					<reportElement uuid="ca129b89-8f29-4491-b6e0-e85660cdea96" style="&lt;Different Values&gt;" positionType="Float" x="265" y="0" width="53" height="18"/>
+					<reportElement uuid="8e91c16e-a3ce-4baa-9a50-0a7d20277074" style="Detail" positionType="Float" x="279" y="0" width="53" height="18"/>
 					<textElement>
 						<font size="12"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{gaji_norek}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true">
-					<reportElement uuid="f9892fe7-c17e-4d40-90bd-b634796d9799" style="&lt;Different Values&gt;" positionType="Float" x="318" y="0" width="53" height="18"/>
+					<reportElement uuid="86831ba8-f605-48da-aa06-cafc54537757" style="Detail" positionType="Float" x="332" y="0" width="53" height="18"/>
 					<textElement>
 						<font size="12"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{gaji_namarek}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true">
-					<reportElement uuid="0392cca0-1a59-4582-9c9c-5980244b0ea0" style="&lt;Different Values&gt;" positionType="Float" x="371" y="0" width="53" height="18"/>
+					<reportElement uuid="91ce6eb8-031a-4df1-88a1-8f685b84ea67" style="Detail" positionType="Float" x="385" y="0" width="53" height="18"/>
 					<textElement>
 						<font size="12"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{gaji_hadir}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true">
-					<reportElement uuid="b138a054-3567-45ee-8792-dfc3ac56365a" style="&lt;Different Values&gt;" positionType="Float" x="424" y="0" width="53" height="18"/>
+					<reportElement uuid="c045eb74-7d37-4ad5-948f-eb703ac40a0c" style="Detail" positionType="Float" x="438" y="0" width="53" height="18"/>
 					<textElement>
 						<font size="12"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{gaji_gaji}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy">
-					<reportElement uuid="3778a73b-a2de-404c-a1ef-87aba4faef48" style="&lt;Different Values&gt;" positionType="Float" x="477" y="0" width="53" height="18"/>
+					<reportElement uuid="cf72436a-aff3-4b0d-9a7e-5132949344a3" style="Detail" positionType="Float" x="492" y="0" width="35" height="18"/>
 					<textElement>
 						<font size="12"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{gaji_periode}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true">
-					<reportElement uuid="ffc2c856-3d94-4d25-936c-596d08753d91" style="&lt;Different Values&gt;" positionType="Float" x="530" y="0" width="53" height="18"/>
+					<reportElement uuid="551f3f4b-802f-4cf1-b8d9-8b3c548e6ca3" style="Detail" positionType="Float" x="530" y="0" width="53" height="18"/>
 					<textElement>
 						<font size="12"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{gaji_bpjstk}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true">
-					<reportElement uuid="19976855-7d28-4e84-b3a0-65b950b2472d" style="&lt;Different Values&gt;" positionType="Float" x="583" y="0" width="53" height="18"/>
+					<reportElement uuid="5d41e921-c99e-465e-a334-820fc75f5710" style="Detail" positionType="Float" x="583" y="0" width="53" height="18"/>
 					<textElement>
 						<font size="12"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{gaji_bpjskes}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true">
-					<reportElement uuid="4e90a37e-441d-4f51-96ea-83e9dbc0ab11" style="&lt;Different Values&gt;" positionType="Float" x="636" y="0" width="53" height="18"/>
+					<reportElement uuid="c9ccbc6c-5704-43d4-843b-710498563724" style="Detail" positionType="Float" x="636" y="0" width="53" height="18"/>
 					<textElement>
 						<font size="12"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{gaji_tunjangan}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true">
-					<reportElement uuid="b64f1696-b485-41e4-8600-85d797487010" style="&lt;Different Values&gt;" positionType="Float" x="689" y="0" width="53" height="18"/>
+					<reportElement uuid="2a9efa22-c097-4bb3-b17c-f21aa86dcd93" style="Detail" positionType="Float" x="689" y="0" width="53" height="18"/>
 					<textElement>
 						<font size="12"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{gaji_pph21}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true">
-					<reportElement uuid="eb3cbc3c-be49-4bdd-816e-d4959ce75ddb" style="&lt;Different Values&gt;" positionType="Float" x="742" y="0" width="53" height="18"/>
+					<reportElement uuid="31f0cf88-6254-42c7-b969-5fd43f11fb56" style="Detail" positionType="Float" x="742" y="0" width="53" height="18"/>
 					<textElement>
 						<font size="12"/>
 					</textElement>
@@ -310,21 +310,7 @@ FROM
 		<band height="7" splitType="Stretch"/>
 	</columnFooter>
 	<pageFooter>
-		<band height="106" splitType="Stretch">
-			<staticText>
-				<reportElement uuid="9df91fc4-766c-4e1d-84b0-02d119f5503c" style="SubTitle" x="650" y="85" width="117" height="16" forecolor="#000000" backcolor="#000000"/>
-				<textElement textAlignment="Right">
-					<font size="12" isBold="true"/>
-				</textElement>
-				<text><![CDATA[(  NK. Sulistyawati )]]></text>
-			</staticText>
-			<staticText>
-				<reportElement uuid="9df91fc4-766c-4e1d-84b0-02d119f5503c" style="SubTitle" x="593" y="0" width="57" height="16" forecolor="#000000" backcolor="#000000"/>
-				<textElement textAlignment="Right">
-					<font size="12" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Jakarta,]]></text>
-			</staticText>
+		<band height="118" splitType="Stretch">
 			<textField pattern="EEEEE dd MMMMM yyyy">
 				<reportElement uuid="42ae148c-0f94-4fd1-a2c5-2f8c72402a90" style="Column header" x="660" y="0" width="142" height="16" forecolor="#000000"/>
 				<textElement>
@@ -338,6 +324,20 @@ FROM
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Finance Manager]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9df91fc4-766c-4e1d-84b0-02d119f5503c" style="SubTitle" x="593" y="0" width="57" height="16" forecolor="#000000" backcolor="#000000"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jakarta,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9df91fc4-766c-4e1d-84b0-02d119f5503c" style="SubTitle" x="650" y="85" width="117" height="16" forecolor="#000000" backcolor="#000000"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[(  NK. Sulistyawati )]]></text>
 			</staticText>
 		</band>
 	</pageFooter>

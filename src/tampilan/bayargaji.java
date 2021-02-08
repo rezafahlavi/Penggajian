@@ -203,7 +203,6 @@ protected void aktif(){
         ttunjangan = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         tpph = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jLabel14 = new javax.swing.JLabel();
@@ -353,13 +352,6 @@ protected void aktif(){
 
         jLabel10.setText("PPH 21");
 
-        jButton1.setText("Cek");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
         jLabel11.setText("Hari");
 
         jButton2.setText("Hitung");
@@ -426,15 +418,13 @@ protected void aktif(){
                             .addGroup(jPanel8Layout.createSequentialGroup()
                                 .addComponent(thadir, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel11)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton1))
+                                .addComponent(jLabel11))
                             .addComponent(tnamarek, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(tnorek, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(ttgl, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
                                 .addComponent(tgaji, javax.swing.GroupLayout.Alignment.LEADING)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel7)
                             .addComponent(jLabel8)
@@ -463,7 +453,7 @@ protected void aktif(){
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel22)
-                .addGap(12, 12, Short.MAX_VALUE)
+                .addGap(14, 14, Short.MAX_VALUE)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -483,8 +473,7 @@ protected void aktif(){
                             .addComponent(jLabel23)
                             .addComponent(jLabel3)
                             .addComponent(thadir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel11)
-                            .addComponent(jButton1))
+                            .addComponent(jLabel11))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(tjabatan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -519,7 +508,7 @@ protected void aktif(){
                             .addComponent(jLabel27)
                             .addComponent(ttotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bsimpan)
                     .addComponent(bbersihkan))
@@ -670,7 +659,7 @@ protected void aktif(){
         String tgl = "yyyy-MM-dd";
         SimpleDateFormat fm = new SimpleDateFormat(tgl);
         String tanggal = String.valueOf(fm.format(ttgl.getDate()));
-        try{
+        try{            
             String sql="insert into gaji (id,id_kar,nama,jabatan,departement,norek,namarek,hadir,gaji,periode,bpjstk,bpjskes,tunjangan,pph21,total)"
             +"values"+"('"+tid.getText()+"','"+cidkar.getSelectedItem().toString()+"','"+cnama.getSelectedItem().toString()+"',"
             + "'"+tjabatan.getText()+"','"+cdepartement.getSelectedItem().toString()+"','"+tnorek.getText()+"','"+tnamarek.getText()+"','"+thadir.getText()+"',"
@@ -680,41 +669,37 @@ protected void aktif(){
             PreparedStatement stat=conn.prepareStatement(sql);
             stat.executeUpdate();
 
-            JOptionPane.showMessageDialog(null, "Data BERHASIL disimpan");
-
-            kosong();
+            JOptionPane.showMessageDialog(null, "Data BERHASIL disimpan, menyiapkan SLIP gaji");
+            
             datatable();
             aktif();
-            kode();
 
         }catch(SQLException e){
             JOptionPane.showMessageDialog(null, "Data GAGAL disimpan"+e);
         }
         
         try{
-            //coding  cetak surat jalan
-            String namaFile = "src/laporan/surat_jalan.jasper";
+            //coding  cetak slip
+            String namaFile = "src/laporan/slip.jasper";
             Connection conn = new koneksi().GetConnection();
             HashMap parameter = new HashMap();
-            
-            
-            String tgllap = String.valueOf(fm.format(ctglkeluar.getDate()));
-            String pemesan = tpemesan.getText();
-            String alamat = talamat.getText();
-            
+                                   
             //parameter
-            parameter.put("tanggal",tgllap);
-            parameter.put("pemesan",pemesan);
-            parameter.put("alamat",alamat);
+            String id = tid.getText();
+            parameter.put("id",id);
             
             File report_file = new File(namaFile);
             JasperReport jasperReport = (JasperReport) JRLoader.loadObject(report_file.getPath());
             JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport,parameter, conn);
             JasperViewer.viewReport(jasperPrint, false);
             JasperViewer.setDefaultLookAndFeelDecorated(true);
+            
         }catch (Exception e){
             JOptionPane.showMessageDialog(null, "Maaf Terjadi Kesalahan Dalam Mencetak"+e);
         }
+        
+        kode();
+        kosong();
     }//GEN-LAST:event_bsimpanActionPerformed
 
     private void bbersihkanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bbersihkanActionPerformed
@@ -768,20 +753,6 @@ protected void aktif(){
             }
         }
     }//GEN-LAST:event_cnamaActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String id = cidkar.getSelectedItem().toString();
-        String sql = "select hadir from absen where id_kar='"+id+"'";
-        try{
-            java.sql.Statement stat=conn.createStatement();
-            ResultSet hasil = stat.executeQuery(sql);
-            while(hasil.next()){
-                thadir.setText(hasil.getString("hadir"));
-            }
-        }catch(Exception e){
-
-        }            
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         int hadir,gaji,totgaji,tottk,totkes,totpph;
@@ -850,7 +821,6 @@ protected void aktif(){
     private javax.swing.JComboBox<String> cdepartement;
     private javax.swing.JComboBox<String> cidkar;
     private javax.swing.JComboBox<String> cnama;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
