@@ -122,7 +122,7 @@ public class karyawan extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 30)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(204, 0, 51));
-        jLabel3.setText("Data Karyawan PT PZ Cussos");
+        jLabel3.setText("Data Karyawan PT PZ Cussons");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

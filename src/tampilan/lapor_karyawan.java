@@ -78,7 +78,7 @@ public class lapor_karyawan extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 30)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(204, 0, 51));
-        jLabel3.setText("Laporan Data Karyawan PT PZ Cussos");
+        jLabel3.setText("Laporan Data Karyawan PT PZ Cussons");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -86,7 +86,7 @@ public class lapor_karyawan extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 180, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 164, Short.MAX_VALUE)
                 .addComponent(jLabel3)
                 .addGap(108, 108, 108)
                 .addComponent(jLabel2))

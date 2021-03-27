@@ -68,7 +68,7 @@ FROM
 				<textElement>
 					<font size="18" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Laporan Rekap Asen PT PZ Cussons Indonesia]]></text>
+				<text><![CDATA[Laporan Rekap Asben PT PZ Cussons Indonesia]]></text>
 			</staticText>
 		</band>
 	</title>

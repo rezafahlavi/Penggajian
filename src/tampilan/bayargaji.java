@@ -220,7 +220,7 @@ protected void aktif(){
 
         jLabel36.setFont(new java.awt.Font("Times New Roman", 1, 30)); // NOI18N
         jLabel36.setForeground(new java.awt.Color(204, 0, 51));
-        jLabel36.setText("Data Penggajian PT PZ Cussos");
+        jLabel36.setText("Data Penggajian PT PZ Cussons");
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);

@@ -74,7 +74,7 @@ protected void datatable(){
 
         jLabel36.setFont(new java.awt.Font("Times New Roman", 1, 30)); // NOI18N
         jLabel36.setForeground(new java.awt.Color(204, 0, 51));
-        jLabel36.setText("Laporan Data Cuti PT PZ Cussos");
+        jLabel36.setText("Laporan Data Cuti PT PZ Cussons");
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -83,8 +83,8 @@ protected void datatable(){
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addComponent(jLabel34)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(156, 156, 156)
+                .addComponent(jLabel36)
+                .addGap(148, 148, 148)
                 .addComponent(jLabel35))
         );
         jPanel9Layout.setVerticalGroup(
